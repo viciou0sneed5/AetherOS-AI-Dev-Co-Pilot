@@ -1,0 +1,5 @@
+{
+  "name": "AetherOS AI Dev Co-Pilot",
+  "description": "A conceptual dashboard showcasing the AI-powered developer tools of the next-generation AetherOS. Features include an AI Code Assistant, Automated Test Case Generator, and Bug Detector, all powered by Gemini.",
+  "requestFramePermissions": []
+}

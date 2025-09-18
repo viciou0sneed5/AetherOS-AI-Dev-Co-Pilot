@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AetherOS AI Dev Co-Pilot</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        overflow: hidden; /* Prevent scrollbars on the main body */
+      }
+      .font-orbitron {
+        font-family: 'Orbitron', sans-serif;
+      }
+      .desktop-background {
+        background-color: #0c0a1f;
+        background-image: 
+          radial-gradient(ellipse at top, #1b2735 0%, #090a0f 100%),
+          url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle fill="%23fff" cx="10" cy="10" r="0.2" opacity="0.5"/><circle fill="%23fff" cx="40" cy="30" r="0.3" opacity="0.7"/><circle fill="%23fff" cx="80" cy="60" r="0.2" opacity="0.6"/><circle fill="%23fff" cx="60" cy="90" r="0.1" opacity="0.4"/><circle fill="%23fff" cx="90" cy="20" r="0.25" opacity="0.8"/></svg>');
+        background-size: cover, 100px 100px;
+        animation: animate-stars 60s linear infinite;
+      }
+      @keyframes animate-stars {
+        from { background-position: 0 0, 0 0; }
+        to { background-position: 0 0, 1000px 1000px; }
+      }
+
+      /* Boot Screen Animation */
+      @keyframes typing {
+        from { width: 0 }
+        to { width: 100% }
+      }
+      @keyframes blink-caret {
+        from, to { border-color: transparent }
+        50% { border-color: #0ff }
+      }
+      .boot-line {
+        overflow: hidden;
+        border-right: .15em solid #0ff;
+        white-space: nowrap;
+        margin: 0 auto;
+        letter-spacing: .15em;
+        animation: typing 2s steps(40, end), blink-caret .75s step-end infinite;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.20.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
